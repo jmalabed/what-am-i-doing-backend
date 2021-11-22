@@ -2,13 +2,12 @@ const mongoose = require("mongoose");
 
 const postSchema = new mongoose.Schema(
   {
-    title: String,
-    text: String,
-    isDone: Boolean,
     category: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "Category",
     },
+    text: String,
+    isDone: Boolean,
   },
   { timestamps: true }
 );
